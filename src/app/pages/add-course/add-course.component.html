@@ -1,0 +1,37 @@
+<div class="modal-header">
+    <h4 class="modal-title">Inscripción de materias</h4><br>   
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+    
+</div>
+<div class="modal-body">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Materia</th>
+                    <th scope="col">Profesor</th>
+                    <th scope="col">Creditos</th>
+                    <th scope="col">Estudiantes matriculados</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let course of courses">
+                    <td>{{ course.courseName }}</td>
+                    <td>{{ course.teacherName }}</td>
+                    <td>{{ course.credits }}</td>
+                    <td>{{ course.studentsByCourse }}</td>
+                    <td>
+                        <button type="button" class="btn btn-dark" (click)="addCourse(course)" [disabled]="course.credits > (creditsByStudent-usedCredits)">
+                            Agregar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer d-flex justify-content-between">
+    <p>Creditos del estudiantes {{creditsByStudent}}, creditos usados {{usedCredits}}</p>
+    <button type="button" class="btn btn-secondary" (click)="activeModal.close('Close click')">Cerrar</button>
+</div>

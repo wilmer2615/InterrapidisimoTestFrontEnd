@@ -1,0 +1,15 @@
+.footer-container {
+    background-color: #082645; /* Bootstrap primary color (blue) */
+    color: white;
+    padding: 5px 0;
+    height: 90px;
+  }
+      
+  .footer-subtitle {
+    margin-top: 10px;
+  }
+
+  .text{
+    display: flex;
+    justify-content: center;
+  }

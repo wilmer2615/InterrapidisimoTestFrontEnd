@@ -1,0 +1,12 @@
+form {
+    margin: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-form{
+    margin-left: 45px;
+}

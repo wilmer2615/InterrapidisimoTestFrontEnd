@@ -1,0 +1,22 @@
+
+
+.content{
+    margin: 30px;   
+}
+
+.text-table{  
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-dark {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #082645;
+    margin-bottom: 5px;
+}
+
+.text-danger{
+    margin-right: 25px;
+}

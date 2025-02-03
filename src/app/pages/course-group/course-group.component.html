@@ -1,0 +1,26 @@
+<div class="modal-header">
+    <h4 class="modal-title">Integrantes</h4><br>   
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+    
+</div>
+<div class="modal-body">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of studentsList; let i = index">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ student.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="activeModal.close('Close click')">Cerrar</button>
+</div>

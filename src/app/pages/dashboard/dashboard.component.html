@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="content">
+        <h2><span><strong>Estudiante: </strong> {{name}}</span></h2>
+        <hr>
+        <div class="text-table">
+            <h4><span>Materias inscritas</span></h4>
+            <button type="button" class="btn btn-dark" (click)="openModal()">Inscribir materias</button>
+        </div>       
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Profesor</th>
+                    <th scope="col">Creditos</th>
+                    <th scope="col" class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let course of coursesList; let i = index">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ course.courseName }}</td>
+                    <td>{{ course.teacherName }}</td>
+                    <td>{{ course.credits }}</td>
+                    <td class="text-center">
+                        <i class="fa-solid fa-trash-can text-danger" (click)="deleteRegisterCourse(course.courseId)"></i>
+                        <button type="button" class="btn btn-dark" (click)="studentsList(course.courseId)">
+                            Integrantes
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
